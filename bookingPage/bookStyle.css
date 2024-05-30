@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2;
+    padding-top: 1rem;
+}
+.logo {
+    font-size: 2rem;
+    margin-left: 7rem;
+    color: #22222;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.navlinks {
+    margin-right: 7rem;
+}
+.navlinks ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    gap: 1.5rem;
+}
+.navitems {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #222222;
+}
+.navitems::after {
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    background-color: #15B097;
+    margin: auto;
+    display: block;
+    margin-top: 5px;
+}
+.navitems:hover:after {
+    width: 100%;
+    transition: width 0.3s linear;
+}
+.itemlist {
+    list-style-type: none;
+    text-decoration: none;
+}
+.bookBtn {
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.15rem;
+    color: whitesmoke;
+    background-color: #15B097;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    border: 0.25rem solid #15B097;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.bookBtn:hover {
+    background-color: transparent;
+}
+.booksection {
+    height: 70vh;
+    border: 2px solid black;
+    margin: 0 7rem 0 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bookdetails {
+    width: 50%;
+}
+.bookdetails h1 {
+    font-family: R;
+}
+.formbox {
+    width: 50%;
+    background-color: gray;
+}
