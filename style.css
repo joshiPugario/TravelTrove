@@ -184,6 +184,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
+    color: #15B097;
 }
 .aboutcontainer {
     display: flex;
@@ -208,6 +209,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
+    color: whitesmoke;
 }
 .siteinfo {
     width: 40vw;
@@ -217,4 +219,5 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
+    color: white;
 }
