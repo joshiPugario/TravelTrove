@@ -18,10 +18,10 @@
                     <li class="itemlist"><a class="navitems" href="">Home</a></li>
                     <li class="itemlist"><a class="navitems" href="">Destinations</a></li>
                     <li class="itemlist"><a class="navitems" href="">About Us</a></li>
-                    <li class="itemlist"><a class="bookBtn" href="">Book now</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="wtgradient"></div>
         <div class="booksection">
             <div class="bookdetails">
                 <h1>Book a Place</h1>
@@ -29,13 +29,14 @@
             </div>
             <div class="formbox">
                 <form>
+                    <h1 id="formtitle">Book Form</h1>
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter name">
+                    <input type="text" name="name" id="name" placeholder="Enter name" autocomplete="off" required>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Enter email">
+                    <input type="email" name="email" id="email" placeholder="Enter email" autocomplete="off" required>
                     <label for="destination">Destination</label>
-                    <select name="destination" id="destination">
-                        <option value="none"></option>
+                    <select name="destination" id="destination" required>
+                        <option id="defopt" value="">Select</option>
                         <option value="boracay">Boracay</option>
                         <option value="puertoprincesa">Puerto Princesa</option>
                         <option value="siargao">Siargao</option>
@@ -58,10 +59,10 @@
                         <option value="manila">Manila</option>
                     </select>
                     <label for="arrival">Date of Arrival</label>
-                    <input type="date" name="arrival" id="arrival">
+                    <input type="date" name="arrival" id="arrival" required>
                     <label for="leave">Date of Leave</label>
-                    <input type="date" name="leave" id="leave">
-                    <button type="submit">Book</button>
+                    <input type="date" name="leave" id="leave" required>
+                    <button type="submit" id="subtn">Book</button>
                 </form>
 
             </div>
