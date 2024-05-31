@@ -27,7 +27,7 @@ body {
 .logo {
     font-size: 2rem;
     margin-left: 7rem;
-    color: #22222;
+    color: #222222;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -85,20 +85,34 @@ body {
     background-color: transparent;
 }
 .booksection {
-    height: 70vh;
+    height: 100vh;
     border: 2px solid black;
     margin: 0 7rem 0 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 4rem;
 }
 .bookdetails {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; 
+
 }
 .bookdetails h1 {
-    font-family: R;
+    font-size: 5rem;
 }
 .formbox {
     width: 50%;
     background-color: gray;
+    border: 2px solid black;
+    width: 30vw;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

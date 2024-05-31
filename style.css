@@ -5,7 +5,9 @@
     height: 100vh;
     padding: 0 7rem 0 7rem;
 }
-
+body {
+    overflow-x: hidden;
+}
 /* HOMEPAGE */
 /* NAVIGATION */
 .home {
@@ -98,7 +100,7 @@
 }
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100vw;
     z-index: 2;
@@ -108,8 +110,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: 7rem;
+    align-items: center;
     height: 60vh;
 }
 .callToAction {
@@ -132,49 +133,6 @@
 .emphasis {
     color: #3DD6D0;
 }
-.callToAction {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-.callToAction h4 {
-    font-size: 2rem;
-    color: whitesmoke;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 2rem;
-    transition: transform 0.5s ease;
-    cursor: pointer;
-}
-#CTA {
-    align-self: flex-end;
-}
-.callToAction h4:hover {
-    transform: translateX(1rem);
-    color: #15B097;
-}
-.features {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100vw;
-    z-index: 2;
-}
-.features p {
-    font-size: 1rem;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: whitesmoke;
-}
-.features i {
-    font-size: 6.5rem;
-    margin-bottom: 1rem;
-    color: whitesmoke;
-    opacity: 0.5;
-}
 .dark {
     position: absolute;
     top: 0;
@@ -185,9 +143,20 @@
     opacity: 0.5;
     z-index: 1;
 }
-.feat1, .feat2, .feat3 {
+.explore {
+    position: absolute;
+    width: 100vw;
+    height: 15vh;
+    top: 85vh;
+    background-color: white;
+    border-radius: 60% 60% 0 0;
+    z-index: 2;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+}
+.arrwup {
+    font-size: 3rem;
+    color: black;
 }
