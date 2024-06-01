@@ -45,7 +45,7 @@ body {
 .logo {
     font-size: 2rem;
     margin-left: 7rem;
-    color: whitesmoke;
+    color: #15B097;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -110,7 +110,6 @@ body {
     width: 100vw;
     z-index: 2;
 }
-
 .title {
     display: flex;
     justify-content: center;
@@ -118,12 +117,15 @@ body {
     align-items: center;
     height: 60vh;
 }
+.trove {
+    color: #ffbb00;
+}
 .callToAction {
     margin-right: 7rem;
 }
 .title h1 {
     font-size: 8rem;
-    color: #3DD6D0;
+    color: #15B097;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -135,14 +137,11 @@ body {
     font-weight: 500;
     font-style: normal;
 }
-.emphasis {
-    color: #3DD6D0;
-}
 .dark {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: black;
     opacity: 0.5;
@@ -160,64 +159,244 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px gray;
 }
 .homeactions .arrwup {
     font-size: 3rem;
-    color: black;
+    color: #15b097;
     transition: 0.5s ease;
 }
 .homeactions:hover .arrwup {
-    color: #15B097;
+    color: #ffbb00;
 }
 /* ABOUT */
+.aboutncontacts {
+    height: 150vh;
+    width: 100vw;
+    background-image: url(/resources/abtpic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start ;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
 .about {
     height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(to bottom, whitesmoke, #15B097);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    z-index: 2;
+    box-shadow: 0 0 10px gray;
 }
-.about h1 {
+.titlecont h1 {
     font-size: 4rem;
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     color: #15B097;
+    z-index: 2;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: #ffbb00;
 }
 .aboutcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
+    height: 80vh;   
+    width: 100vw; 
+    position: relative;
+    overflow: hidden;   
+    
 }
-.imgcontainer {
+.whitecont {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.5;
+    background-color: whitesmoke;
+    z-index: 1;
+}
+.greencont {
+    position: absolute;
+    height: 160%;
+    width: 80%;
+    top: -10%;
+    left: 48%;
+    background-image: linear-gradient(to bottom, transparent, #15b097, transparent);
+    z-index: 2;
+    rotate: 10deg;
+}
+.featcontainer {
     width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 3;
+    padding: 1rem;
 }
-.imgcontainer img {
-    border-radius: 50%;
-    margin-bottom: 3rem;
-    height: 25rem;
+.feattitle {    
+    align-self: flex-start;
+    font-size: 3rem;
 }
-.imgcontainer h3 {
-    font-size: 2rem;
+.feat {
+    color: #ffbb00;
+    font-size: 1.5rem;
+}
+.desc {
+    font-size: 1rem;
+}
+.feattitle, .feat, .desc {
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
-    color: whitesmoke;
+    color: #15B097;
+    list-style-type: none;
+    margin-bottom: 0.5rem;
 }
 .siteinfo {
     width: 40vw;
+    z-index: 3;
 }
 .siteinfo p {
     font-size: 1.4rem;
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
+    color: whitesmoke;
+}
+.gradient {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, whitesmoke, transparent);
+}
+.darkabt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, transparent, aqua);
+    opacity: 0.5;
+    z-index: 1;
+}
+/* CONTACTS */
+.contacts {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    position: relative;
+}
+.contactinfo {
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+.contactinfo h1 {
+    font-size: 4rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffbb00;
+    align-self: flex-start;
+}
+.contactinfo p {
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    align-self: flex-start;
+}
+.socials a {
+    font-size: 1.5rem;
     color: white;
+}
+.socials a:hover {
+    color: #15B097;
+}
+.cntdark {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent, black);
+    opacity: 0.6;
+    z-index: 1;
+}
+.formbox {
+    z-index: 2;
+    width: 40vw;
+}
+.formbox form {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 30vh;
+}
+.formbox form input, textarea  {
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    opacity: 0.8;
+}
+#send {
+    align-self: flex-start;
+    padding: 0.4rem;
+    background-color: #15B097;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+#send:hover {
+    background-color: #288986;
+}
+.formbox form h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffbb00;
+}
+.copyright {
+    position: absolute;
+    color: whitesmoke;
+    z-index: 2;
+    top: 90%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
