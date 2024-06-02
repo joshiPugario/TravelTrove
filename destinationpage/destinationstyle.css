@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+.up i{
+    position: fixed;
+    top: 85vh;
+    left: 90vw;
+    font-size: 4rem;
+    color: whitesmoke;
+    z-index: 4;
+    transition: color 0.3;
+}
+.up i:hover {
+    color: #ffbb00;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 4;
+    padding-top: 1rem;
+    background-color: transparent;
+}
+.logo {
+    font-size: 2rem;
+    margin-left: 7rem;
+    color: #15B097;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.navlinks {
+    margin-right: 7rem;
+}
+.navlinks ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    gap: 1.5rem;
+}
+.navitems {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: whitesmoke;
+}
+.navitems::after {
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    background-color: #15B097;
+    margin: auto;
+    display: block;
+    margin-top: 5px;
+}
+.navitems:hover:after {
+    width: 100%;
+    transition: width 0.3s linear;
+}
+.itemlist {
+    list-style-type: none;
+    text-decoration: none;
+}
+.bookBtn {
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.15rem;
+    color: whitesmoke;
+    background-color: #15B097;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    border: 0.25rem solid #15B097;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.bookBtn:hover {
+    background-color: transparent;
+}
+.trove {
+    color: #ffbb00;
+}
+.navspace {
+    width: 100vw;
+    height: 20vh;
+    z-index: 1;
+}
+section {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 100vh;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    position: relative;
+}
+.destinationinfo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 40vh;
+}
+.darken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 1;
+}
+.title {
+    z-index: 2;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.title h1 {
+    color: whitesmoke;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 7rem;
+    text-wrap: wrap;
+}
+.title h3 {
+    color: whitesmoke;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+.description {
+    z-index: 3;
+    width: 40vw;
+    align-self: center;
+}
+.description p {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+#boracay {
+    background-image: url(/resources/boracayBg.jpg);
+}
+#puertoprincesa {
+    background-image: url(/resources/puerto-princesabg.png);
+}
+#siargao {
+    background-image: url(/resources/siargaobg.jpg);
+}
+#bohol {
+    background-image: url(/resources/chocolatehillsBg.jpg);
+}
+#cebu {
+    background-image: url(/resources/cebubg.jpg);
+}
+.reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    z-index: 3;
+}
+.revcards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+}
+.cards {
+    height: 30vh;
+    width: 15vw;
+    position: relative;
+    z-index: 3;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    overflow: hidden;
+    gap: 0.7em;
+}
+.whitebg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 1;
+}
+.profile {
+    font-size: 5rem;
+    z-index: 3;
+    opacity: 0.8;
+    color: whitesmoke;
+}
+.name {
+    z-index: 3;
+    font-size: 1.7rem;
+    color: whitesmoke;
+    align-self: flex-start;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.rating {
+    z-index: 3;
+    color: #ffbb00;
+    align-self: flex-start;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.revdesc {
+    flex-wrap: wrap;
+    z-index: 3;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: whitesmoke;
+}
