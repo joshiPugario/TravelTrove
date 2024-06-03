@@ -16,7 +16,7 @@
             <div class="navlinks">
                 <ul>
                     <li class="itemlist"><a class="navitems" href="/index.html">Home</a></li>
-                    <li class="itemlist"><a class="navitems" href="">Destinations</a></li>
+                    <li class="itemlist"><a class="navitems" href="/destinationpage/destination.html">Destinations</a></li>
                     <li class="itemlist"><a class="navitems" href="/index.html#about">About Us</a></li>
                     <li class="itemlist"><a class="navitems" href="/index.html#contact">Contact</a></li>
                 </ul>
@@ -30,7 +30,7 @@
             </div>
             <div class="formbox">
                 <div class="bg"></div>
-                <form>
+                <form id="myForm">
                     <h1 id="formtitle">Book Form</h1>
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" placeholder="Enter name" autocomplete="off" required>
@@ -49,26 +49,16 @@
                         <option value="baguio">Baguio</option>
                         <option value="tagaytay">Tagaytay</option>
                         <option value="bicol">Bicol</option>
-                        <option value="launion">La Union</option>
-                        <option value="vigan">Vigan</option>
-                        <option value="elnido">El Nido</option>
-                        <option value="benguet">Benguet</option>
-                        <option value="marinduque">Marinduque</option>
-                        <option value="sorsogon">Sorsogon</option>
-                        <option value="capiz">Capiz</option>
-                        <option value="leyte">Leyte</option>
-                        <option value="samar">Samar</option>
-                        <option value="siquijor">Siquijor</option>
-                        <option value="puertogalera">Puerto Galera</option>
-                        <option value="manila">Manila</option>
                     </select>
                     <label for="arrival">Date of Arrival</label>
                     <input type="date" name="arrival" id="arrival" required>
-                    <button type="submit" id="subtn">Book</button>
+                    <button type="submit" onclick="book()" id="subtn">Book</button>
                 </form>
 
             </div>
         </div>
     </div>
+
+    <script src="booksSript.js"></script>
 </body>
 </html>

@@ -177,6 +177,15 @@ section {
 #cebu {
     background-image: url(/resources/cebubg.jpg);
 }
+#baguio {
+    background-image: url(/resources/baguiobg.jpeg);
+}
+#tagaytay {
+    background-image: url(/resources/tagaytaybg.jpg);
+}
+#bicol {
+    background-image: url(/resources/bicolbg.jpeg);
+}
 .reviews {
     display: flex;
     flex-direction: column;
