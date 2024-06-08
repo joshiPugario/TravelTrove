@@ -117,15 +117,20 @@ body {
     font-style: normal;
     font-size: 0.8rem;
 } 
-.loginbox button {
+.logbtn {
     border: none;
     border-radius: 1rem;
     padding: 0.5rem 0.8rem 0.5rem 0.8rem;
     z-index: 2;
     border: 1px solid whitesmoke;
     transition: 0.3s;
+    text-decoration: none;
+    background-color: whitesmoke;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-.loginbox button:hover {
+.logbtn:hover {
     background-color: transparent;
     color: whitesmoke;
 }
