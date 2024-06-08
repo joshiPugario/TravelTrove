@@ -1,0 +1,141 @@
+body {
+    background-image: url(/resources/homeBg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2;
+    padding-top: 1rem;
+}
+.logo {
+    font-size: 2rem;
+    margin-left: 7rem;
+    color: #15B097;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.tagline {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-right: 7rem;
+    color: whitesmoke;
+}
+.dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+.trove {
+    color: #ffbb00;
+}
+.loginbox {
+    position: absolute;
+    top: 35%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40vh;
+    width: 20vw;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.textboxes {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 90%;
+    gap: 0.5rem;
+    z-index: 2;
+}
+.loginbox h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: whitesmoke; 
+    z-index: 2;
+}
+.textboxes label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    font-size: 0.8rem
+}
+.textboxes input {
+    border: none;
+    height: 2.5rem;
+    padding: 0 0.5rem 0 0.5rem;
+    border-radius: 0.5rem;
+}
+.options {
+    width: 90%;
+    z-index: 2;
+}
+.options ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0.5rem 0 0.5rem 0;
+}
+.options ul li {
+    list-style-type: none;
+}
+.options ul li a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+} 
+.loginbox button {
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    z-index: 2;
+    border: 1px solid whitesmoke;
+    transition: 0.3s;
+}
+.loginbox button:hover {
+    background-color: transparent;
+    color: whitesmoke;
+}
+.bglogin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #15B097;
+    opacity: 0.5;
+    z-index: 1;
+}

@@ -42,9 +42,9 @@ body {
     font-weight: 500;
     font-style: normal;
 }
-.navlinks {
+/* .navlinks {
     margin-right: 7rem;
-}
+} */
 .navlinks ul {
     display: flex;
     justify-content: center;
@@ -93,6 +93,32 @@ body {
 }
 .bookBtn:hover {
     background-color: transparent;
+}
+.search {
+    margin-right: 7rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search i {
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+.search i:hover {
+    color: #15B097;
+}
+.searchbar {
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 0.5rem;
+    height: 1.5rem;
+    color: whitesmoke;
+    padding: 0 0.5rem 0 0.5rem;
+    max-width: 17rem;
+}
+.searchbar::placeholder {
+    color: whitesmoke;
 }
 .trove {
     color: #ffbb00;
