@@ -61,7 +61,7 @@ body {
     justify-content: center;
     flex-direction: column;
     height: 40vh;
-    width: 20vw;
+    width: 40vw;
     border-radius: 1rem;
     overflow: hidden;
 }
@@ -166,10 +166,6 @@ body {
     
     .textboxes input {
         height: 4vh;
-    }
-    
-    .logbtn {
-        width: 100%;
     }
 }
 
