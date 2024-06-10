@@ -13,3 +13,17 @@ document.getElementById("myForm").onsubmit = function() {
     alert("Booking Success! An email will be sent to you in a few minutes confirming your booking. Thank you for trusting TravelTrove, Enjoy your wonderful vacation!");
     return false; // Prevent the default form submission
   };
+
+const hamIcon = document.querySelector('.ham--icon');
+const hamMenu = document.querySelector('.ham-menu');
+const hamExit = document.querySelector('.ham-exit');
+
+hamIcon.addEventListener('click', function () {
+  hamMenu.classList.toggle('active');
+  hamIcon.style.display = 'none';
+}); 
+
+hamExit.addEventListener('click', function () {
+  hamMenu.classList.toggle('active');
+  hamIcon.style.display = 'block';
+});

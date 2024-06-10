@@ -11,6 +11,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 .wtgradient {
     position: absolute;
@@ -81,21 +82,81 @@ body {
     list-style-type: none;
     text-decoration: none;
 }
-.bookBtn {
-    list-style-type: none;
-    text-decoration: none;
-    margin-left: 2rem;
-    font-size: 1.15rem;
-    color: whitesmoke;
-    background-color: #15B097;
-    border-radius: 0.5rem;
-    padding: 0.8rem;
-    border: 0.25rem solid #15B097;
-    transition: 0.5s ease;
-    cursor: pointer;
+.ham-icon {
+    position: fixed;
+    top: 4vh;
+    right: 10vw;
+    z-index: 4;
+    display: none;
 }
-.bookBtn:hover {
+.ham-icon i {
+    color: whitesmoke;
+    font-size: 2rem;
+}
+.ham-icon:hover i {
+    color: #15B097;
+}
+.ham-menu {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
     background-color: transparent;
+    padding: 2rem;
+    display: none;
+}
+.ham-menu.active {
+    display: block;
+}
+.ham-menu.notActive {
+    display: none;
+}
+.greenbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #15B097;
+    opacity: 0.5;
+    z-index: 1;
+}
+.ham-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.ham-items {
+    list-style-type: none;
+    align-self: flex-start;
+    z-index: 4;
+}
+.ham-items a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    transition: all 0.3s ease;
+}
+.ham-items a:hover {
+    color: #ffbb00;
+}
+.ham-exit {
+    list-style-type: none;
+    color: whitesmoke;
+    font-size: 3rem;
+    align-self: flex-end;
+    transition: 0.3s;
+    z-index: 3;
+}
+.ham-exit:hover, .ham-items:hover a {
+    color: #ffbb00;
 }
 .booksection {
     height: 100vh;
@@ -201,4 +262,44 @@ label {
 }
 #defopt {
     color: gray;
+}
+
+
+@media (max-width: 1500px) {
+    .formbox {
+        width: 35vw;
+    }
+    .bookdetails h1 {
+        font-size: 3rem;
+    }
+    .bookdetails p {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 1200px) {
+    .bookdetails h1 {
+        font-size: 2.5rem;
+    }
+    .bookdetails p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 1000px) {
+    .bookdetails {
+        display: none;
+    }
+    .formbox {
+        width: 50vw;
+    }
+    .ham-icon {
+        display: block;
+    }
+    .navitems {
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    .formbox {
+        width: 60vw;
+    }
 }

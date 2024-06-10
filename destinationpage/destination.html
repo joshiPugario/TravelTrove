@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <!-- <a href="#boracay" class="up"><i class="fa-solid fa-circle-arrow-up"></i></a> -->
+    <a href="#boracay" class="up"><i class="fa-solid fa-circle-arrow-up"></i></a>
     <nav class="navbar">
         <div class="logo">Travel<span class="trove">Trove</span></div>
         <div class="navlinks">
@@ -26,6 +26,30 @@
         </div>
         <div class="search"><input class="searchbar" type="text" placeholder="Search Destination"><a href="/destinationpage/destination.html"><i class="fa-solid fa-magnifying-glass"></i></a></div>
     </nav>
+    <div class="ham-icon"><i class="fa-solid fa-bars ham--icon"></i></div>
+    <div class="ham-menu" id="ham-menu">
+        <div class="greenbg"></div>
+        <ul class="ham-links">
+            <li class="ham-exit">
+                <i class="fa-solid fa-xmark"></i>
+            </li>
+            <li class="ham-items">
+                <a href="/homepage/home.html">Home</a>
+            </li>
+            <li class="ham-items">
+                <a href="/destinationpage/destination.html">Destinations</a>
+            </li>
+            <li class="ham-items">
+                <a href="home.html#about">About Us</a>
+            </li>
+            <li class="ham-items">
+                <a href="home.html#contact">Contacts</a>
+            </li>
+            <li class="ham-items">
+                <a href="/bookingPage/book.html">Book Now</a>
+            </li>
+        </ul>
+    </div>
     <section class="destinationsection" id="boracay">
         <div class="navspace"></div>
         <div class="darken"></div>
@@ -482,5 +506,7 @@
         </div>
     </section>
     
+
+    <script src="destinationscript.js"></script>
 </body>
 </html>

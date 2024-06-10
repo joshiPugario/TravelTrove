@@ -9,7 +9,7 @@ body {
 .up i{
     position: fixed;
     top: 85vh;
-    left: 90vw;
+    right: 5vw;
     font-size: 4rem;
     color: whitesmoke;
     z-index: 4;
@@ -20,15 +20,11 @@ body {
 }
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height: 8vh;
-    margin: 0;
-    padding: 0;
     background-color: transparent;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
     z-index: 4;
     padding-top: 1rem;
@@ -36,15 +32,87 @@ body {
 }
 .logo {
     font-size: 2rem;
-    margin-left: 7rem;
     color: #15B097;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
-/* .navlinks {
-    margin-right: 7rem;
-} */
+.ham-icon {
+    position: fixed;
+    top: 4vh;
+    left: 90vw;
+    z-index: 4;
+    display: none; 
+}
+.ham-icon i {
+    color: whitesmoke;
+    font-size: 2rem;
+}
+.ham-icon:hover i {
+    color: #15B097;
+}
+.ham-menu {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: transparent;
+    padding: 2rem;
+    display: none;
+}
+.ham-menu.active {
+    display: block;
+}
+.ham-menu.notActive {
+    display: none;
+}
+.greenbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #15B097;
+    opacity: 0.5;
+    z-index: 1;
+}
+.ham-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.ham-items {
+    list-style-type: none;
+    align-self: flex-start;
+    z-index: 4;
+}
+.ham-items a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    transition: all 0.3s ease;
+}
+.ham-items a:hover {
+    color: #ffbb00;
+}
+.ham-exit {
+    list-style-type: none;
+    color: whitesmoke;
+    font-size: 3rem;
+    align-self: flex-end;
+    transition: 0.3s;
+    z-index: 3;
+}
+.ham-exit:hover, .ham-items:hover a {
+    color: #ffbb00;
+}
 .navlinks ul {
     display: flex;
     justify-content: center;
@@ -150,7 +218,7 @@ section {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0.2;
+    opacity: 0.5;
     z-index: 1;
 }
 .title {
@@ -284,4 +352,90 @@ section {
     font-weight: 300;
     font-style: normal;
     color: whitesmoke;
+}
+
+@media (max-width: 1500px) {
+    .revdesc {
+        font-size: 0.8rem;
+    }
+    .name {
+        font-size: 1.5rem;
+    }
+    .title h1 {
+        font-size: 6.5rem;
+    }
+    .title h3 {
+        font-size: 1.4rem;
+    }
+    .description p {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 1200px) {
+    .navitems {
+        display: none;
+    }
+    .bookBtn {
+        display: none;
+    }
+    .navbar {
+        justify-content: space-between;
+        width: 60vw;
+        padding-left: 5rem;
+    }
+    .ham-icon {
+        display: block;
+    }
+    .ham-menu {
+        display: none;
+    }
+    .title h1{
+        font-size: 6rem;
+    }
+    .title h3 {
+        font-size: 1.3rem;
+    }
+    .description p {
+        font-size: 1.3rem;
+    }
+    .name {
+        font-size: 1.5rem;
+    }
+    .cards i {
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    .destinationinfo {
+        flex-direction: column;
+    }
+    .title {
+        align-self: center;
+        align-items: center;
+        width: 80vw;
+    }
+    .title h1{
+        font-size: 5rem;
+    }
+    .title h3 {
+        font-size: 1rem;
+    }
+    .description {
+        width: 80vw;
+    }
+    .description p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .revcards {
+        gap: 1.8rem;
+    }
+    .name {
+        font-size: 1.3rem;
+    }   
+}
+@media (max-width: 700px) {
+    .search {
+        display: none;
+    }
 }

@@ -1,8 +1,10 @@
 html {
     scroll-behavior: smooth;
+    width: 100vw;
 }
 *{
     margin: 0;
+    padding: 0;
 }
 .contentSection {
     height: 100vh;
@@ -29,11 +31,9 @@ body {
 }
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height: 8vh;
-    margin: 0;
-    padding: 0;
     background-color: transparent;
     position: absolute;
     top: 0;
@@ -41,17 +41,16 @@ body {
     width: 100vw;
     z-index: 2;
     padding-top: 1rem;
+    
 }
 .logo {
     font-size: 2rem;
-    margin-left: 7rem;
     color: #15B097;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 .search {
-    margin-right: 7rem;
     gap: 1rem;
     display: flex;
     justify-content: center;
@@ -76,9 +75,83 @@ body {
 .searchbar::placeholder {
     color: whitesmoke;
 }
-/* .navlinks {
-    margin-right: 7rem;
-} */
+.ham-icon {
+    position: absolute;
+    top: 4vh;
+    left: 90vw;
+    z-index: 3;
+    display: none; 
+}
+.ham-icon i {
+    color: whitesmoke;
+    font-size: 2rem;
+}
+.ham-icon:hover i {
+    color: #15B097;
+}
+.ham-menu {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: transparent;
+    padding: 2rem;
+    display: none;
+}
+.ham-menu.active {
+    display: block;
+}
+.ham-menu.notActive {
+    display: none;
+}
+.greenbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #15B097;
+    opacity: 0.5;
+    z-index: 1;
+}
+.ham-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.ham-items {
+    list-style-type: none;
+    align-self: flex-start;
+    z-index: 4;
+}
+.ham-items a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    transition: all 0.3s ease;
+}
+.ham-items a:hover {
+    color: #ffbb00;
+}
+.ham-exit {
+    list-style-type: none;
+    color: whitesmoke;
+    font-size: 3rem;
+    align-self: flex-end;
+    transition: 0.3s;
+    z-index: 3;
+}
+.ham-exit:hover, .ham-items:hover a {
+    color: #ffbb00;
+}
+
 .navlinks ul {
     display: flex;
     justify-content: center;
@@ -123,6 +196,7 @@ body {
     border: 0.25rem solid #15B097;
     transition: 0.5s ease;
     cursor: pointer;
+    flex-wrap: nowrap;
 }
 .bookBtn:hover {
     background-color: transparent;
@@ -216,7 +290,6 @@ body {
     align-items: center;
     flex-direction: column;
     z-index: 2;
-    box-shadow: 0 0 10px gray;
 }
 .titlecont h1 {
     font-size: 4rem;
@@ -424,4 +497,150 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        justify-content: space-between;
+        width: 60vw;
+        padding-left: 5rem;
+    }
+    .navitems {
+        display: none;
+    }
+    .bookBtn {
+        display: none;
+    }
+    .ham-menu {
+        display: contents;
+    }
+    .title h1 {
+        font-size: 5rem;
+    }
+    .title h3 {
+        font-size: 1.3rem;
+    }
+    .titlecont h1 {
+        font-size: 2.5rem;
+    }
+    .siteinfo p {
+        font-size: 1.2rem;
+    }
+    .feattitle {
+        font-size: 2.5rem;
+    }
+    .feat {
+        font-size: 1.2rem;
+    }
+    .desc {
+        font-size: 1rem;
+    }
+    .contactinfo h1 {
+        font-size: 2.5rem;
+    }
+    .contactinfo p {
+        font-size: 1rem;
+    }
+    .socials a {
+        font-size: 1rem;
+    }
+    .ham-icon {
+        display: block;
+    }
+    .ham-menu {
+        display: none;
+    }
+}
+@media (max-width: 960px) {
+    .title h1 {
+        font-size: 4rem;
+    }
+    .title h3 {
+        font-size: 1rem;
+    }
+    .titlecont h1 {
+        font-size: 2rem;
+    }
+    .siteinfo p {
+        font-size: 1rem;
+    }
+    .feattitle {
+        font-size: 2rem;
+    }
+
+}
+@media (max-width: 768px) {
+    .aboutcontainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        height: 50vh;
+        overflow: hidden;
+    }
+    .whitecont {
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, transparent, whitesmoke);
+    }
+    .greencont {
+        display: none;
+    }
+    
+    .titlecont h1 {
+        font-size: 3rem;
+        height: 10vh;
+        margin-top: 2rem;
+    }
+    .siteinfo {
+        width: 80vw;
+    }
+    .siteinfo p {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: justify;
+        align-self: center;
+        color: #15B097;
+    }
+    .feattitle {
+        font-size: 1.5rem;
+        align-self: center;
+        margin-top: 1rem;
+    }
+    .feat {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+    .desc {
+        font-size: 0.9rem;
+        align-self: center;
+        margin-top: 1rem;
+        text-align: justify;
+    }
+    .featcontainer {
+        margin-top: 2rem;
+        margin-right: 4rem;
+        margin-left: 4rem;
+        justify-content: center;
+        align-items: stretch;
+        width: 80vw;
+        height: 25vh;
+    }
+    .titlecont {
+        height: 10vh;
+    }
+    .aboutcontainer {
+        height: 90vh;
+        justify-content: stretch;
+        
+    }
+    .featcontainer ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .titlecont {
+        z-index: 3;
+    }
+    .aboutcontainer {
+        box-shadow: none;
+    }
 }

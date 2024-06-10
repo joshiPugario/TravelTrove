@@ -2,10 +2,11 @@ body {
     background-image: url(/resources/homeBg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    height: 100vh;
 }
 
 .navbar {
@@ -89,7 +90,7 @@ body {
 }
 .textboxes input {
     border: none;
-    height: 2.5rem;
+    height: 5vh;
     padding: 0 0.5rem 0 0.5rem;
     border-radius: 0.5rem;
 }
@@ -129,6 +130,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
 }
 .logbtn:hover {
     background-color: transparent;
@@ -143,4 +145,73 @@ body {
     background-color: #15B097;
     opacity: 0.5;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .logo, .tagline {
+        margin: 0.5rem 0;
+    }
+    
+    .loginbox {
+        width: 90%;
+        padding: 1.5rem;
+    }
+    
+    .textboxes input {
+        height: 4vh;
+    }
+    
+    .logbtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .tagline {
+        font-size: 0.8rem;
+    }
+    
+    .loginbox {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    .textboxes label, .textboxes input, .options ul li a {
+        font-size: 0.8rem;
+    }
+    
+    .logbtn {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .loginbox {
+        width: 70%;
+        padding: 2rem;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
 }
